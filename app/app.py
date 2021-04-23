@@ -4,7 +4,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
-@app.route('/<valor_consultado_brl>', methods=['GET'])
+@app.route('/convertemoeda/<valor_consultado_brl>', methods=['GET'])
 def home(valor_consultado_brl):
     try:
         valor_consultado_brl = float(valor_consultado_brl.replace(',','.'))
